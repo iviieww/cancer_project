@@ -17,5 +17,15 @@ def graph():
     
     return render_template('graph.html')
 
+@app.route('/list')
+def list():
+    
+    return render_template('list.html')
+
+@app.route('/help')
+def help():
+    
+    return render_template('help.html')
+
 if __name__ =="__main__":
     app.run(debug=True)
