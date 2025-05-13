@@ -1,0 +1,23 @@
+.chart-container {
+    position: relative;
+    height: 70vh;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.dataset-controls {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+.legend-item {
+    display: inline-block;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.legend-color {
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    margin-right: 5px;
+}
