@@ -28,19 +28,40 @@
                     <input type="text" id="searchInput" class="form-control" placeholder="Search...">
                 </div>
                 <div class="list-group">
+                    <!-- Filter for diseage_status_Sex,Age -->
+                    <h6>diseage_status_Sex,Age</h6>
                     <div class="form-check">
-                        <input class="form-check-input filter-checkbox" type="checkbox" value="random"
-                            id="filterRandom">
-                        <label class="form-check-label" for="filterRandom">Random</label>
+                        <input class="form-check-input filter-checkbox" type="checkbox" value="liver cancer"
+                            id="filterLiverCancer">
+                        <label class="form-check-label" for="filterLiverCancer">Liver Cancer</label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input filter-checkbox" type="checkbox" value="example"
-                            id="filterExample">
-                        <label class="form-check-label" for="filterExample">Example</label>
+                        <input class="form-check-input filter-checkbox" type="checkbox" value="healthy"
+                            id="filterHealthy">
+                        <label class="form-check-label" for="filterHealthy">Healthy</label>
                     </div>
+
+                    <!-- Filter for tissue -->
+                    <h6>Tissue</h6>
                     <div class="form-check">
-                        <input class="form-check-input filter-checkbox" type="checkbox" value="test" id="filterTest">
-                        <label class="form-check-label" for="filterTest">Test</label>
+                        <input class="form-check-input filter-checkbox" type="checkbox" value="blood plasma"
+                            id="filterBloodPlasma">
+                        <label class="form-check-label" for="filterBloodPlasma">Blood Plasma</label>
+                    </div>
+
+                    <!-- Filter for platform -->
+                    <h6>Platform</h6>
+                    <div class="form-check">
+                        <input class="form-check-input filter-checkbox" type="checkbox" value="hiseq2000"
+                            id="filterHiseq2000">
+                        <label class="form-check-label" for="filterHiseq2000">Hiseq2000</label>
+                    </div>
+
+                    <!-- Filter for assey -->
+                    <h6>Assey</h6>
+                    <div class="form-check">
+                        <input class="form-check-input filter-checkbox" type="checkbox" value="wgs" id="filterWGS">
+                        <label class="form-check-label" for="filterWGS">WGS</label>
                     </div>
                 </div>
             </div>
@@ -49,34 +70,84 @@
             <div class="col-md-9">
                 <div class="list-con">
                     <div class="list-con-info">
-
+                        <!-- Create Graph Button -->
+                        <div class="mb-3">
+                            <button class="btn btn-success" id="createGraph">Create Graph</button>
+                        </div>
+                        <!-- Data Table with Row Selection -->
                         <table border="1" class="table table-striped table-sm" id="dataTable">
                             <thead>
                                 <tr>
-                                    <th>list</th>
-                                    <th>name</th>
-                                    <th>id</th>
-                                    <th>description</th>
+                                    <th></th>
+                                    <th>ID</th>
+                                    <th>diseage_status_Sex,Age</th>
+                                    <th>tissue</th>
+                                    <th>#of_fragment_read_length</th>
+                                    <th>platform</th>
+                                    <th>assey</th>
+                                    <th>study</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>1</td>
-                                    <td>random</td>
-                                    <td>data</td>
-                                    <td>placeholder</td>
+                                    <td><input type="checkbox" class="row-checkbox"></td>
+                                    <td>H32-EE85759</td>
+                                    <td>Liver cancer</td>
+                                    <td>blood plasma</td>
+                                    <td>31.1m 75</td>
+                                    <td>Hiseq2000</td>
+                                    <td>WGS</td>
+                                    <td>Jiang et al., 2015</td>
                                 </tr>
                                 <tr>
-                                    <td>2</td>
-                                    <td>example</td>
-                                    <td>info</td>
-                                    <td>sample</td>
+                                    <td><input type="checkbox" class="row-checkbox"></td>
+                                    <td>H232-EE85761</td>
+                                    <td>Liver cancer</td>
+                                    <td>blood plasma</td>
+                                    <td>32.1m 75</td>
+                                    <td>Hiseq2000</td>
+                                    <td>WGS</td>
+                                    <td>Jiang et al., 2015</td>
                                 </tr>
                                 <tr>
-                                    <td>3</td>
-                                    <td>test</td>
-                                    <td>data</td>
-                                    <td>demo</td>
+                                    <td><input type="checkbox" class="row-checkbox"></td>
+                                    <td>H200-EE85765</td>
+                                    <td>Liver cancer</td>
+                                    <td>blood plasma</td>
+                                    <td>31.6m 75</td>
+                                    <td>Hiseq2000</td>
+                                    <td>WGS</td>
+                                    <td>Jiang et al., 2015</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="row-checkbox"></td>
+                                    <td>C330-EE85756</td>
+                                    <td>Healthy</td>
+                                    <td>blood plasma</td>
+                                    <td>40.7M 75</td>
+                                    <td>Hiseq2000</td>
+                                    <td>WGS</td>
+                                    <td>Jiang et al., 2015</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="row-checkbox"></td>
+                                    <td>C331-EE85757</td>
+                                    <td>Healthy</td>
+                                    <td>blood plasma</td>
+                                    <td>29.8M 75</td>
+                                    <td>Hiseq2000</td>
+                                    <td>WGS</td>
+                                    <td>Jiang et al., 2015</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" class="row-checkbox"></td>
+                                    <td>C329-EE85770</td>
+                                    <td>Healthy</td>
+                                    <td>blood plasma</td>
+                                    <td>40.3M 75</td>
+                                    <td>Hiseq2000</td>
+                                    <td>WGS</td>
+                                    <td>Jiang et al., 2015</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -123,6 +194,26 @@
                     }
                 });
             });
+        });
+
+        // JavaScript for Create Graph Button
+        document.getElementById('createGraph').addEventListener('click', function () {
+            const selectedRows = [];
+            document.querySelectorAll('.row-checkbox:checked').forEach(checkbox => {
+                const row = checkbox.closest('tr');
+                const rowData = Array.from(row.querySelectorAll('td')).map(cell => cell.textContent.trim());
+                selectedRows.push(rowData);
+            });
+
+            if (selectedRows.length === 0) {
+                alert('No rows selected!');
+            } else {
+                // Store selected rows in localStorage to pass data to graph.html
+                localStorage.setItem('selectedRows', JSON.stringify(selectedRows));
+
+                // Redirect to graph.html
+                window.location.href = '{{ url_for("graph") }}';
+            }
         });
     </script>
 </body>
