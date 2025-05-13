@@ -70,9 +70,10 @@
             <div class="col-md-9">
                 <div class="list-con">
                     <div class="list-con-info">
-                        <!-- Create Graph Button -->
+                        <!-- Create Graph Button and upload file-->
                         <div class="mb-3">
                             <button class="btn btn-success" id="createGraph">Create Graph</button>
+                            <a href="{{ url_for('upload') }}"><button class="btn btn-primary" id="uploadFile">Upload File</button></a>
                         </div>
                         <!-- Data Table with Row Selection -->
                         <table border="1" class="table table-striped table-sm" id="dataTable">
